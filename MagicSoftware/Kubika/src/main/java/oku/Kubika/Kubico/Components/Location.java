@@ -15,6 +15,7 @@ public class Location {
     private String title;
 
     @OneToOne
+    @JoinColumn(name = "property_id")
     private Property property;
 
     private String latitude;
@@ -22,4 +23,10 @@ public class Location {
     private String longitude;
 
     private String googleId;
+    public Location(String title, String latitude, String longitude, String googleId){
+        this.googleId =googleId;
+        this.latitude =latitude;
+        this.longitude =longitude;
+        this.title = title;
+    }
 }

@@ -17,9 +17,11 @@ public class Category {
     private Integer id;
 
     @OneToMany
+    @JoinColumn(name = "property_id")
     private List<Property> properties;
 
-    enum Type{
+    private Type type;
+    public enum Type{
 
         APARTMENT,
         HOUSE,
@@ -29,5 +31,6 @@ public class Category {
         LAND,
         COMMERCIAL_PROPERTY
     }
+
 
 }

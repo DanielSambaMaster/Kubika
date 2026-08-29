@@ -1,13 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
-import Properties from "./pages/Properties";
-import PropertyDetails from "./pages/PropertyDetails";
-import Favorites from "./pages/Favorites";
-import Messages from "./pages/Messages";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import PublishProperty from "./pages/PublishProperty";
+
+
 
 function App() {
     return (
@@ -17,36 +11,36 @@ function App() {
 
                 <Route path="/" element={<Home />} />
 
-                <Route path="/imoveis" element={<Properties />} />
+                <Route path="/imoveis" element={<Home />} />
 
                 <Route
                     path="/imovel/:id"
-                    element={<PropertyDetails />}
+                    element={<Home />}
                 />
 
                 <Route
                     path="/favoritos"
-                    element={<Favorites />}
+                    element={<Home />}
                 />
 
                 <Route
                     path="/mensagens"
-                    element={<Messages />}
+                    element={   <Home />}
                 />
 
                 <Route
                     path="/login"
-                    element={<Login />}
+                    element={<Home />}
                 />
 
                 <Route
                     path="/registar"
-                    element={<Register />}
+                    element={<Home />}
                 />
 
                 <Route
                     path="/publicar"
-                    element={<PublishProperty />}
+                    element={<Home />}
                 />
 
             </Routes>

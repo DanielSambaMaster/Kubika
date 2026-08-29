@@ -15,9 +15,11 @@ public class PaymentModality {
     private Integer id;
 
     @OneToMany
-    private List<Property> property;
+    @JoinColumn(name = "property_id")
 
-    enum Modality{
+    private List<Property> property;
+    private Modality modality;
+    public enum Modality{
 
         MONTHLY,
         YEARLY,
